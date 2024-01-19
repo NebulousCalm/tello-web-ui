@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Select Plan</title>
+    <script defer src="{{ url_for('static', filename='javascript/flight-redirect.js') }}"></script>
 </head>
 <body>
     {% for row in rows %}
         <div class="container">
             {{ row[2] }}
             {{ row[1] }}
-            <span id="hidden">{{ row[0] }}</span>
+            <span class="hidden">{{ row[0] }}</span>
         </div>
     {% endfor %}
 </body>

@@ -6,4 +6,7 @@ Utilizing flask and Tello (designed by CODE4FUN) I designed a (scuffed) interfac
 > pip install tello
 > pip install flask
 > pip install sqlite3
+> pip install opencv-python
+> pip install pillow
+> pip install pygame
 >```

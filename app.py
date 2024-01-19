@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, redirect
 import sqlite3
-import tello
-from utils import gen_key
+from utils import gen_key, run_plan
 
 
 app = Flask(__name__)
@@ -44,9 +43,17 @@ def fly():
     return render_template('fly.html', rows=rows)
 
 
-@app.route('/fly/<name>')
+@app.route('/run')
 def fly_queries():
-    return render_template('fly.html')
+    plan = request.args.get('plan')
+    print(plan)
+    try:
+        plan = plan.replace(' ', '')
+        run_plan(plan)
+        return render_template('fly.html')
+    except AttributeError:
+        print("No plans found")
+        return render_template('fly.html')
 
 
 if __name__ == '__main__':
