@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Plan</title>
+    <link rel="href" href="{{  url_for('static', filename='plan.css') }}" />
+    <script defer src="{{ url_for('static', filename='forms.js' )}}"></script>
+</head>
+<body>
+    <form METHOD="POST" id="parentForm">
+        <select id="select" name="select">
+            <option value="takeoff">takeoff</option>
+            <option value="forward">Forward</option>
+            <option value="backward">Backward</option>
+            <option value="left">Left</option>
+            <option value="right">Right</option>
+            <option value="up">Up</option>
+            <option value="down">Down</option>
+            <option value="anticlockwise">Anti-clockwise</option>
+            <option value="clockwise">Clockwise</option>
+            <option value="flipforward">Flip Forward</option>
+            <option value="flipbackward">Flip Backward</option>
+            <option value="flipleft">Flip Left</option>
+            <option value="flipright">Flip Right</option>
+            <!-- video controls -->
+        </select>
+
+        <input type="text" name='item' class="planInput" />
+        <input type="submit" value="hewo :3" />
+    </form>
+    <button id="add-input">Add</button>
+</body>
+</html>
