@@ -6,8 +6,24 @@ const addInput = () =>{
     input.setAttribute('class', 'planInput')
     input.setAttribute('name', 'item')
 
+    let select = document.createElement('select');
+    select.setAttribute('name', 'select');
+    select.setAttribute('class', 'selectClass')
+
+    let option = document.createElement("option");
+    option.text = "Forward";
+    option.value = "Forward";
+
+    let option2 = document.createElement("option");
+    option2.text = "Backward"
+    option2.value = "Backward"
+
     let parentForm = document.getElementById('parentForm');
-    parentForm.insertBefore(input, parentForm.firstChild);
+    parentForm.append(input, parentForm.lastChild);
+    let appendSection = document.getElementsByClassName('planInput');
+    parentForm.append(select, parentForm.lastChild);
+
+    select.append(option, option2);
 }
 
 document.getElementById('add-input').addEventListener('click', addInput)
