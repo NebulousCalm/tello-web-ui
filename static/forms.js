@@ -10,8 +10,6 @@ const addInput = () =>{
     select.setAttribute('name', 'select');
     select.setAttribute('class', 'selectClass')
 
-    // shitty append stuff
-
     let forward = document.createElement("option");
     forward.text = "Forward";
     forward.value = "forward";
